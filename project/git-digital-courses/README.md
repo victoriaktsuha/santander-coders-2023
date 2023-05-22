@@ -1,6 +1,6 @@
 # Curso digital: Git
 
-# Comandos Git
+## Comandos Git
 
 - git init = transforma pasta atual em repositório
 - git config --global = configura a conta do git/github para toda a máquina
@@ -9,8 +9,11 @@
 - git diff = mostra as modificações e as linhas que foram modificadas enquanto o arquvio não esta em 'staged'
 - git diff -- staged = mostra as modificações e as linhas que foram modificadas dos arquivos em staged
 - git commit -m "Descrição das alterações" = para commitar os arquivos em staged
+- git log = exibe o histórico dos últimos commits
+- git restore .\caminho\nomedoarquivo = altera o arquivo indicado para o contéudo anterior modificação (unmodified <= modified)
+- git restore --staged .\caminho\nomedoarquivo = retorna o arquivo em staged para modified sem perder as alterações (modified <= staged)
 
-# Classificação de arquivos Git
+## Classificação de arquivos Git
 
 untracked => unmodified => modified => staged => unmodified <=
 
