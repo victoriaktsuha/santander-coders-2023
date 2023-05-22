@@ -25,3 +25,8 @@ untracked - add the file (arquivo novo)
 unmodified - edit the file (arquivo já mapeado/salvo, já foi pra staging e foi 'commitado' e pode ser editado)
 modified - stage the file (arquivo modificado, diferente do original/salvo quando comparado e poder ser enviado para 'staged')
 staged - commit (arquivos prontos para serem 'commitados' e salvos); A partir daqui os arquivos 'ficam' no estágio 'unmodified'
+
+## Git ≠ GitHub
+
+- Git - Terminal + comandos para versionar
+- GitHub - Plataforma de hospedagem e versionamento
