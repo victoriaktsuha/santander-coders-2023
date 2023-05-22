@@ -16,9 +16,11 @@
 - git push nomedorepositorioremoto nomedabranchfinal (e.g. git push origin master) = envia todos os commits feitos localmente (origin) para a branch 'master', aquela que armazena todos os originais/unmodified
 - git fetch = 'puxa' e exibe todos as atualizações da master (remoto) e que não existem na origin (local) SEM adicionar direto no projeto local, permitindo que as atualizações sejam analisadas antes de acontecer o 'merge' => Após esse comando, pode ser rodado "git diff origin/master" para comparar as atualizações baixadas da master com os arquivos da origin; Sendo aprovadas, pode ser feito o 'git pull'
 - git pull = 'puxa' todas as alterações feitas em outra maquina e/ou por outra pessoa, fazedno já um merge local e atualizando o repositório local com as mesmas informações incluidas na master
+- git branch = lista a branch existentes e indica a branch atual
 - git branch nomedabranch = cria uma nova branch
 - git log --oneline --decorate = indica o histórico (por ser um log) e para que branch o HEAD está apontando, pode ajudar a identificar a branch caso esteja utilizando o command line
 - git checkout nomedabranch = acessa a branch
+- git merge nomedabranch = Estando na branch que vai RECEBER atualização (master, na maioria das vezes), executar 'git merge' indicando o nome da branch que vai PASSAR as atualizações
 
 ## Classificação de arquivos Git
 
@@ -34,6 +36,8 @@ staged - commit (arquivos prontos para serem 'commitados' e salvos); A partir da
 - Git - Terminal + comandos para versionar
 - GitHub - Plataforma de hospedagem e versionamento
 
-## Git Branch
+## Branchs
 
 Desenvolvimentos em paralelo (repositórios locais em branch diferentes) para posteriormente ter um 'merge' de ambos os códigos (master)
+
+## Merge
