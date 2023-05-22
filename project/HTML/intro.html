@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML</title>
+  </head>
+  <body>
+    <header>
+        (&lt;header&gt;&lt;/header&gt;)
+        <nav>Barra de navegação (&lt;nav&gt;&lt;/nav&gt;)
+            <a href="/">
+                <img src="https://cbissn.ibict.br/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png" alt="logo" height="40">
+            </a>
+
+            <ul>
+                <li>
+                    <a href="">Home</a>
+                </li>
+                <li>
+                    <a href="">Portfolio</a>
+                </li>
+                <li>
+                    <a href="">Blog</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        (&lt;main&gt;&lt;/main&gt;)
+<section>
+   ( &lt;section&gt;&lt;/section&gt;)
+      <h3>Front-End</h3>
+      <p>
+        Parte visual da aplicação composta por linguagem (de marcação, não
+        programação) HTML (estrutura), CSS (estilização) e JavaScript
+        (funcionalidade)
+      </p>
+      <p>
+        A web pode ser considerada, na semiotica, um unico <mark>hipertexto ( &lt;mark&gt;&lt;/mark&gt; )</mark> (texto que
+        navega para outros textos)
+      </p>
+      <p>
+        <strong>Linguagem de marcação ( &lt;strong&gt;&lt;/strong&gt; )</strong> possui <code>simbolos ( &lt;code&gt;&lt;/code&gt; )</code> especiais que indicam
+        metainformações, referindo-se a forma, <s>hierarquia  ( &lt;s&gt;&lt;/s&gt; )</s>, ordem e/ou <em>semantica  ( &lt;em&gt;&lt;/em&gt; )</em>
+        dos elementos da pagina. (&lt;b&gt;&lt;/b&gt; ≠
+        &lt;strong&gt;&lt;/strong&gt;)
+      </p>
+      <p><blockquote>"Marcação -> tags"  ( &lt;blockquote&gt;&lt;/blockquote&gt; ) </blockquote></p>
+      <p><pre>Tags podem ter atributos (chave-valor)  ( &lt;pre&gt;&lt;/pre&gt; )</pre></p>
+      <p>2<sup>10</sup> ( &lt;sup&gt;&lt;/sup&gt; ) - H<sub>2</sub>O  ( &lt;sub&gt;&lt;/sub&gt; )</p>
+    </section>
+    <section>
+        <article>
+            (&lt;article&gt;&lt;/article&gt;)
+            Dentro de Article pode ser aadc o header, main e footer - utilizado para artigos/blogs
+        </article>
+        <figure>
+            (&lt;figure&gt;&lt;/figure&gt;)
+            Uitlizado para envolver a tag &lt;img&gt;, indicando semanticamente que ali dentro tem uma imagem
+
+            <figcaption>
+                (&lt;figcaption&gt;&lt;/figcaption&gt;)
+                Utilizado para legenda de imagem
+            </figcaption>
+        </figure>
+    </section>
+    <section>
+        <h2>Tabela</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Matricula</th>
+                    <th>Cargo</th>
+                    <th>Descr.</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">15/08/2016</td>
+                    <td>Carol</td>
+                    <td>carol@mail.com</td>
+                    <td>0123</td>
+                    <td colspan="2">Aluno</td>
+                    <!-- Quando se tem um rowspan/colspan, a ultima linha/coluna a ser mesclada deve ser ocultada/apagada para que não quebre a tabela, inserindo um celula a mais sem necessidade -->
+                    <!-- <td>Aluno</td> -->
+                </tr>
+                <tr>                    
+                    <!-- <td>15/08/2016</td> -->
+                    <td>Tony</td>
+                    <td>tony@mail.com</td>
+                    <td>4567</td>
+                    <td>Aluno</td>
+                    <td>Interno</td>
+                </tr>
+                <tr>
+                    <td>25/10/2019</td>
+                    <td>Peter</td>
+                    <td>peter@mail.com</td>
+                    <td>8901</td>
+                    <td>Aluno</td>
+                    <td>Externo</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section>
+        <h2>Formulários</h2>
+        <hr>
+        <form action="" method="get">
+            <!-- action vazio apenas recarrega a pagina; 'get' é padrão, de 'buscar conteudo', mas para informações pessoais não parecerem na URL, por exemplo, utiliza-se 'post' -->
+            <div>
+                <label for="texto1">Placeholder</label>
+                <input id="texto1" type="text" placeholder="Placeholder">
+            </div>  
+            <div>
+                <label for="texto2">Value</label>
+                <input id="texto2" type="text" value="Value">
+            </div> 
+            <div>
+                <label for="texto3">Name</label>
+                <input id="texto3" type="text" name="Name">
+                <!-- Ao submeter o formulário (action), o que estiver no atributo name será o que irá identificar esse campo no JS -->
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input id="password" type="password" name="password">
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email">
+            </div>
+            <div>
+                <label for="date">date</label>
+                <input id="date" type="date" name="date">
+            </div>
+            <div>
+                <label for="time">time</label>
+                <input id="time" type="time" name="time">
+            </div>
+            <div>
+                <label for="number">number</label>
+                <input id="number" type="number" name="number">
+            </div>
+            <div>
+                <label for="file">File</label>
+                <input id="file" type="file" name="file">
+            </div>
+            <div>
+                <label for="url">url</label>
+                <input id="url" type="url" name="url">
+            </div>
+            <div>
+                <label for="color">color</label>
+                <input id="color" type="color" name="color">
+            </div>
+            <div>
+                <label for="range">range (default 0-100)</label>
+                <input id="range" type="range" name="range" value="68" max="150" min="10">
+            </div>
+            <div>
+                <label for="checkbox">checkbox</label>
+                <input id="checkbox" type="checkbox" name="checkbox" checked>
+            </div>
+            <div>
+                <label for="checkbox">checkbox</label>
+                <input id="checkbox" type="checkbox" name="checkbox">
+            </div>
+            <div>
+                <label for="radio">radio</label>
+                <input id="radio" type="radio" name="radio" checked>
+            </div>
+            <div>
+                <label for="radio">radio</label>
+                <input id="radio" type="radio" name="radio" >
+            </div>
+            <div>
+                <!-- <label for="reset">reset</label> -->
+                <input id="reset" type="reset" name="reset" value="Clean">
+            </div>
+            <div>
+                <!-- <label for="submit">submit</label> -->
+                <input id="submit" type="submit" name="submit" value="Submit">
+                <!-- Ao clicar no botão submit, o que está inoutado nos campos será acrescentado a URL -->
+            </div>
+            <div>
+                <textarea name="bio" id="bio" cols="30" rows="10" ></textarea>
+            </div>
+            <div>
+                <select name="select" id="select">
+                    <option value="" disabled selected>Selecione:</option>
+                    <option value="receita">receita</option>
+                    <option value="despesa">despesa</option>
+                </select>
+            </div>
+            
+        </form>
+    </section>
+      </main>
+      <aside>
+       ( &lt;aside&gt;&lt;/aside&gt;)
+        Conteudo da barra lateral
+      </aside>
+    <footer>(&lt;footer&gt;&lt;/footer&gt;)</footer>
+  </body>
+</html>
