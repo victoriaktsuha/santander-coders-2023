@@ -12,6 +12,9 @@ body {
   font-family: "Times New Roman", Times, serif;
   font-size: 1.8rem;
 }
+main {
+  padding-top: 7rem;
+}
 table,
 td,
 th {
@@ -26,7 +29,7 @@ table tr:first-child {
   color: aliceblue;
 }
 table tr:nth-child(2n + 3) {
-  /*n é de base 0*/
+  /*n é de base 0; então, elemento 3 (0 + 3), elemento 5 (2 + 3), elemento 7 (2 + 5)*/
   background-color: bisque;
 }
 h1 {
@@ -92,7 +95,13 @@ ul {
 ol {
   list-style: decimal-leading-zero;
 }
+.boxes {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
 .box {
+  flex: 30%;
   height: 10rem;
   width: 20rem;
   padding: 1.5rem;
@@ -102,9 +111,50 @@ ol {
   border: 10px solid red;
   display: inline-block;
   border-radius: 1rem;
+  /* position: static; padrão */
+}
+/* .box:nth-child(1) {
+  float: none;
+}
+.box:nth-child(3) {
+  float: left;
+}
+*/
+.box + span {
+  clear: both;
+  display: none;
+}
+/* .box:nth-child(1) {
+  position: absolute;
+  top: 20px;
+  left: 100px;
+} */
+/*
+.box:nth-child(n + 2) {
+  /* n + 2 = todas os elementos a partir do 2°.. */
+/* display: none; 
+}
+*/
+/* .box:nth-child(2) {
+  position: fixed;
+  top: 15px;
+  left: 30px;
+} */
+nav.menu {
+  position: fixed;
+  background-color: #5a5a5a;
+  color: #fff;
+  width: 100%;
+  height: 7rem;
+  z-index: 1;
 }
 img {
   height: 10rem;
   width: 15rem;
   object-fit: cover;
+}
+.contatos h2 {
+  top: 7rem;
+  position: sticky; /* o sticky precisa de um 'top' ou 'bottom' para saber onde ele começa a fixar*/
+  background-color: limegreen;
 }
