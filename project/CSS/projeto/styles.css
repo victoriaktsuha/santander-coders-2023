@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -20,6 +21,8 @@ body {
 
 :root {
   font-size: 62.5%; /* 16px * 62.5% = 10px*/
+  --default-border: 0.1rem solid rgba(0, 0, 0, 0.15); /* variaveis do css*/
+  --default-border-radius: 1.2rem;
 }
 aside {
   grid-area: hero;
@@ -37,10 +40,11 @@ main span {
 main {
   width: 60rem;
   height: 52rem;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: var(--default-border);
   padding: 4.4rem 5.7rem;
-  border-radius: 1.2rem;
+  border-radius: var(--default-border-radius);
   grid-area: form;
+  position: relative;
 }
 main h2 {
   max-width: 43rem;
@@ -56,7 +60,7 @@ main .actions a {
   color: #fff;
   height: 5.5rem;
   font-size: 2.4rem;
-  border-radius: 1.2rem;
+  border-radius: var(--default-border-radius);
   text-decoration: none;
   display: flex;
   justify-content: center;
@@ -68,6 +72,16 @@ main .actions a + a {
   background-color: #ff5678;
   margin-top: 4.8rem;
 }
+main header {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 0 1.8rem;
+}
+main header i {
+  font-size: 2.4rem;
+  color: #ff5678;
+}
 main footer p {
   margin-top: 8rem;
   font-size: 1.6rem;
@@ -78,4 +92,52 @@ main footer a {
   display: block;
   text-align: center;
   color: black;
+}
+main form {
+  margin-top: 1.6rem;
+}
+main form .points {
+  position: relative;
+}
+main form label {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: lowercase;
+  margin-bottom: 1rem;
+  display: block;
+}
+main form :is(input, select) {
+  width: 48.9rem;
+  height: 5.5rem;
+  background-color: #fff;
+  border: var(--default-border);
+  border-radius: var(--default-border-radius);
+  display: block;
+}
+main form select {
+  appearance: none;
+}
+main form .select-div {
+  position: relative;
+}
+main form .select-div::after {
+  top: 5.2rem;
+  left: 46.2rem;
+  content: "\f107";
+  font-family: "Font Awesome 6 Free";
+  position: absolute;
+  z-index: 1;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #35e6e9;
+}
+main form input + button {
+  position: absolute;
+  right: -3.7rem;
+  top: calc(2.7rem + 2.3rem);
+  background-color: transparent;
+  border: none;
+  color: #35e6e9;
+  font-size: 2.4rem;
+  cursor: pointer;
 }
