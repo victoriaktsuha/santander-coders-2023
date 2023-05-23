@@ -1,6 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 h1 {
-  color: blue;
-  background-color: aqua;
+  color: #ff0000;
   font-size: 40px;
-  font-weight: 100;
+  font-weight: 900;
+  font-style: oblique;
+  text-decoration: underline;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+p {
+  font-size: 18px;
+  text-align: justify;
+  text-indent: 90px; /*apenas na primeira linha*/
+}
+.bg {
+  height: 500px;
+  width: 100%;
+  background-color: aqua;
+  background-image: url(https://cbissn.ibict.br/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; /*background fica fixo e o restante do conteudo rola por cima*/
 }
