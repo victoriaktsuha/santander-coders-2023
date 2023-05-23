@@ -3,12 +3,31 @@
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
 }
 :root {
-  font-size: 62.5%; /*padrão para converter o font size 'rem' a cada 10 px = 32px => 3.2rem*/
+  font-size: 62.5%; /* padrão para converter o font size 'rem' a cada 10 px = 32px => 3.2rem */
 }
 body {
   font-family: "Times New Roman", Times, serif;
+  font-size: 1.8rem;
+}
+table,
+td,
+th {
+  border: 1px solid black;
+}
+table {
+  font-size: 2.4rem;
+  border-collapse: collapse;
+}
+table tr:first-child {
+  background-color: steelblue;
+  color: aliceblue;
+}
+table tr:nth-child(2n + 3) {
+  /*n é de base 0*/
+  background-color: bisque;
 }
 h1 {
   color: #ff0000;
@@ -61,4 +80,31 @@ a:active
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed; /*background fica fixo e o restante do conteudo rola por cima*/
+}
+ul,
+ol {
+  padding-left: 3.2rem;
+}
+
+ul {
+  list-style: armenian;
+}
+ol {
+  list-style: decimal-leading-zero;
+}
+.box {
+  height: 10rem;
+  width: 20rem;
+  padding: 1.5rem;
+  background-color: blueviolet;
+  margin: 1.5rem;
+  color: #fff;
+  border: 10px solid red;
+  display: inline-block;
+  border-radius: 1rem;
+}
+img {
+  height: 10rem;
+  width: 15rem;
+  object-fit: cover;
 }
