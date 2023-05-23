@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem; /*14px*/
+}
+.content {
+  display: grid;
+  grid-template-areas:
+    ". . . . ."
+    ". hero . form ."
+    ". hero . form ."
+    ". . . . .";
+  gap: 8.5rem;
+}
+
+:root {
+  font-size: 62.5%; /* 16px * 62.5% = 10px*/
+}
+aside {
+  grid-area: hero;
+}
+aside h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 6.4rem;
+  font-weight: 500;
+}
+
+aside h1 span,
+main span {
+  color: #ff5678;
+}
+main {
+  width: 60rem;
+  height: 52rem;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 4.4rem 5.7rem;
+  border-radius: 1.2rem;
+  grid-area: form;
+}
+main h2 {
+  max-width: 43rem;
+  font-size: 3.6rem;
+  font-weight: 500;
+}
+main .actions {
+  display: flex;
+  flex-flow: column wrap;
+}
+main .actions a {
+  background-color: #35e6e9;
+  color: #fff;
+  height: 5.5rem;
+  font-size: 2.4rem;
+  border-radius: 1.2rem;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5.4rem;
+}
+main .actions a + a {
+  /* a + a = "a partir do segundo elemento a.."*/
+  background-color: #ff5678;
+  margin-top: 4.8rem;
+}
+main footer p {
+  margin-top: 8rem;
+  font-size: 1.6rem;
+}
+main footer a {
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  display: block;
+  text-align: center;
+  color: black;
+}
