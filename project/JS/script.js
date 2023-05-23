@@ -144,3 +144,25 @@ console.log(10 - "asddsa"); // NaN
 console.log(2 + 3 + 4 + "5"); // 95 string
 console.log("5" + 2 + 3 + 4); // 5234 string
 console.log("10" - "4" - "3" - 2 + "5"); //15 string
+
+console.clear();
+
+/////////////////
+// Estruturas Condicionais
+
+const idade4 = 20;
+
+if (idade4 >= 18) {
+  console.log("Você é maior de idade !");
+} else {
+  console.log("Você é menos de idade !");
+}
+
+let media = 10;
+if (media >= 7) {
+  console.log("Aprovado(a)");
+} else if (media >= 5) {
+  console.log("Recuperação");
+} else {
+  console.log("Reprovado(a)");
+}
