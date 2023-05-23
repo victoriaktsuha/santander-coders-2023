@@ -1,1 +1,3 @@
-console.log("10" - "4" - "3" - 2 + "5");
+for (let i = 12; i >= 8; i--) {
+  console.log(i);
+}
