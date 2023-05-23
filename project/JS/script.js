@@ -170,14 +170,14 @@ if (media >= 7) {
 const input = require("readline-sync");
 
 const numeroSorteado = 5;
-/*
+
 let numero4 = Number(input.question("Escolha um numero:"));
 
- while (numero4 !== numeroSorteado) {
+while (numero4 !== numeroSorteado) {
   console.log("Voce errou. Tente novamente");
   numero4 = Number(input.question("Escolha um numero:"));
 }
-console.log("Voce acertou"); */
+console.log("Voce acertou");
 
 // console.log(numero4, typeof numero4);
 
@@ -222,3 +222,29 @@ for (let i = 1; i <= 3; i++) {
   soma1 += nota;
 }
 console.log(`A média do aluno é ${soma1 / 3}`);
+
+/////////////////
+// Arrays (Parte I)
+
+let arr = ["Nome", 26, 1.77, true];
+console.log(arr);
+console.log(arr[0]);
+console.log(arr[1], arr[2], arr[3]);
+console.log(arr.length); // 4
+
+for (let i = 0; i < arr.lenght; i++) {
+  console.log(arr[i]);
+}
+
+for (let el of arr) {
+  /* 'of' percorre os elementos*/
+  console.log(el);
+}
+
+for (let index in arr) {
+  /* 'in' percorre os index*/
+  console.log(index);
+}
+
+/////////////////
+// Métodos de Arrays (Parte II)
