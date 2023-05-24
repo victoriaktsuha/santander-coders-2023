@@ -12,6 +12,14 @@ const minhaNovaLista = [
   { id: "2", value: "Escova" },
   { id: "3", value: "Creme dental" },
 ];
+
+const tarefas = [
+  { id: "1", title: "Task 1" },
+  { id: "2", title: "Task 2" },
+  { id: "3", title: "Task 3" },
+  { id: "4", title: "Task 4" },
+];
+
 export default function App() {
   const [produtos, setProdutos] = useState(minhaNovaLista);
   const [pesquisa, setPesquisa] = useState("");
@@ -27,6 +35,19 @@ export default function App() {
       setProdutos(minhaNovaLista);
     }
   }, [pesquisa]);
+
+  const [tarefas, setTarefas] = useState([]);
+
+  useEffect(() => {
+    async function buscarDados() {
+      const resultado = await fetch(
+        "https://jsonplaceholder.typicode.com/todos"
+      );
+      const resultadoFinal = await resultado.json();
+      return resultadoFinal;
+    }
+    buscarDados().then((res) => setTarefas(res));
+  }, []);
 
   return (
     <div>
@@ -53,6 +74,27 @@ export default function App() {
           </div>
         );
       })}
+      <h1>Buscando dados com fetch</h1>
+      <ol>
+        {tarefas.map((tarefa) => {
+          return (
+            <div key={tarefa.id}>
+              <li>
+                {tarefa.title} -
+                {tarefa.completed ? (
+                  <mark>
+                    <b>Concluido</b>
+                  </mark>
+                ) : (
+                  <b>
+                    <i>Pendente</i>
+                  </b>
+                )}
+              </li>
+            </div>
+          );
+        })}
+      </ol>
     </div>
   );
 }
