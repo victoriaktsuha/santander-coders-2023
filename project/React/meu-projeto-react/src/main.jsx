@@ -7,3 +7,4 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <App />
   </React.StrictMode>
 );
+// <App /> é o primeiro componente da aplicação
