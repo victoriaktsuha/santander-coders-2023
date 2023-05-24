@@ -5,6 +5,7 @@
 import MeuComponente from "./components/MeuComponente";
 import MeuBotao from "./components/MeuBotao";
 import MeuContador from "./components/MeuContador";
+import MinhaLista from "./components/MinhaLista";
 
 export default function App() {
   return (
@@ -15,6 +16,8 @@ export default function App() {
       <MeuBotao conteudo="depois aqui" />
       <MeuBotao conteudo="e por fim aqui" />
       <MeuContador />
+      <h1>Listas no React</h1>
+      <MinhaLista />
     </div>
   );
 }
