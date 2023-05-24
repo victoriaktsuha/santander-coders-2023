@@ -4,7 +4,7 @@
 import { useEffect, useState } from "react";
 import MeuComponente from "./components/MeuComponente";
 import MeuBotao from "./components/MeuBotao";
-// import MeuContador from "./components/MeuContador";
+import MeuContador from "./components/MeuContador";
 import MinhaLista from "./components/MinhaLista";
 
 const minhaNovaLista = [
@@ -13,12 +13,12 @@ const minhaNovaLista = [
   { id: "3", value: "Creme dental" },
 ];
 
-const tarefas = [
+/* const tarefas = [
   { id: "1", title: "Task 1" },
   { id: "2", title: "Task 2" },
   { id: "3", title: "Task 3" },
   { id: "4", title: "Task 4" },
-];
+]; */
 
 export default function App() {
   const [produtos, setProdutos] = useState(minhaNovaLista);
@@ -57,7 +57,7 @@ export default function App() {
       <MeuBotao conteudo="me clique" />
       <MeuBotao conteudo="depois aqui" />
       <MeuBotao conteudo="e por fim aqui" />
-      {/* <MeuContador /> */}
+      <MeuContador />
       <h1>Listas no React</h1>
       <MinhaLista />
       <h1>Efeitos Colaterais</h1>

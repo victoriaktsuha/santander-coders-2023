@@ -1,4 +1,5 @@
-import { useState } from "react"; /*Estado*/
+import { useState } from "react";
+import styles from "./button.module.css";
 
 export default function MeuContador() {
   console.log("Renderizando meu contador");
@@ -23,11 +24,15 @@ export default function MeuContador() {
   }
 
   return (
-    <div>
+    <div className="container">
       <h1>Meu Contador: {contador}</h1>
       {/* {contador > 9 ? <h1>Valor muito grande</h1> : null} */}
-      <button onClick={iterar}>Iterar</button>
-      <button onClick={remover}>Diminuir</button>
+      <button className={styles.myButton} onClick={iterar}>
+        Iterar
+      </button>
+      <button className={styles.myButton} onClick={remover}>
+        Diminuir
+      </button>
     </div>
   );
 }
